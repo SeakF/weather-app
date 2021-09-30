@@ -1,0 +1,142 @@
+/* import all styles */
+@import "./mainInfo.css";
+@import "./dailyCard.css";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	overflow-x: hidden;
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+	color: black;
+	position: relative;
+}
+
+.opacity-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 0.5s opacity;
+	display: block;
+}
+
+.input {
+	height: 40px;
+	width: 260px;
+	font-size: 22px;
+	letter-spacing: 1.5px;
+	border-bottom-left-radius: 5px;
+	background-color: rgba(255, 255, 255, 0);
+	border-width: 0px 0px 2px 0px;
+	border-bottom: solid rgba(0, 0, 0, 0.8);
+	outline: none;
+	color: rgba(0, 0, 0, 0.8);
+	text-transform: capitalize;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+form > button {
+	height: 38px;
+	width: 110px;
+	outline: none;
+	border: none;
+	color: rgba(255, 255, 255, 0.8);
+	letter-spacing: 1.5px;
+	font-weight: 600;
+	font-size: 17px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: pointer;
+}
+
+form > button:hover {
+	background-color: rgba(0, 0, 0, 0.85);
+	color: rgba(255, 255, 255, 0.85);
+}
+
+form > button:active {
+	background-color: rgba(0, 0, 0, 0.95);
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.input:focus {
+	border-bottom: solid rgba(0, 0, 0, 0.9);
+	border-radius: 0px;
+	color: rgba(0, 0, 0, 0.95);
+}
+
+.plate {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+
+.loading-state {
+	position: absolute;
+	z-index: 50;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.loading-state > div {
+	height: 100px;
+	width: 100px;
+	margin-top: -5%;
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@media only screen and (max-width: 966px) {
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	.input {
+		width: 60vw;
+	}
+
+	form > button {
+		width: 30vw;
+		height: 38px;
+		font-size: 13px;
+	}
+}

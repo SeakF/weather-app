@@ -1,0 +1,74 @@
+.daily-info {
+	padding-top: 10vh;
+	display: flex;
+	justify-content: center;
+}
+
+.daily-cards-container {
+	display: grid;
+	max-width: 90vw;
+	grid-template-rows: auto;
+	grid-auto-flow: column;
+	overflow-x: scroll;
+	padding-bottom: 10px;
+}
+
+.daily-cards-container::-webkit-scrollbar {
+	height: 15px;
+}
+
+.daily-cards-container::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 10px;
+}
+
+.daily-cards-container::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 10px;
+}
+
+.daily-card {
+	width: 18vh;
+	height: 28vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-color: rgba(0, 0, 0, 0);
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 15px;
+	color: rgba(255, 255, 255, 0.8);
+	margin: 0px 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: min(30px, 2vh);
+	cursor: pointer;
+	transition: 0.3s;
+	opacity: 0.8;
+}
+.daily-card:nth-last-child(1) {
+	margin: 0px 0px 0px 5px;
+}
+.daily-card:nth-child(1) {
+	margin: 0px 5px 0px 0px;
+}
+
+.daily-icon {
+	width: 100%;
+	height: 30%;
+	background-color: rgba(255, 255, 255, 0.95);
+	display: flex;
+	justify-content: center;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	margin-bottom: 20px;
+	color: rgba(255, 255, 255, 0.8);
+	transition: 0.3s;
+}
+
+.daily-card:hover .daily-icon {
+	height: 25%;
+}
+
+.daily-card > span {
+	margin: min(12px, 1vh) 0px 0px;
+}
