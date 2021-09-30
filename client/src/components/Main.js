@@ -7,8 +7,6 @@ import '../styles/main.css'
 import Hourly from './Hourly'
 import loadingWheel from '../images/loading.png'
 
-// dodać animacje do przejścia ikonki pogody i chowania informacji godzinowej przy klikaniu na dni i bedzie koks
-//i troche oddalić pierwszy rząd informacji od góry bo jest niewyśrodkowane
 
 const Main = () => {
     const dispatch = useDispatch()
@@ -279,5 +277,3 @@ const Main = () => {
 }
 
 export default Main
-
-//zrobić ciasteczka z miejscem zamieszkania / brak zgody to ustawia na londyn
